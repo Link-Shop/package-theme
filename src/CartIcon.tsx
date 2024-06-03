@@ -2,7 +2,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useCart } from '@shopify/hydrogen-react';
-import isNumber from 'lodash/isNumber';
 import greaterThan from 'lodash/gt';
 
 const Wrapper = styled.div`
