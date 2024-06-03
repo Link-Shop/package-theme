@@ -30,12 +30,13 @@ exports.useCart = exports.CartProvider = void 0;
 var react_1 = __importDefault(require("react"));
 var hydrogen_react_1 = require("@shopify/hydrogen-react");
 var hydrogen_react_2 = require("@shopify/hydrogen-react");
+var CartIcon_1 = __importDefault(require("./CartIcon"));
 ;
 var CartProvider = function (_a) {
     var children = _a.children, shopifyProps = __rest(_a, ["children"]);
     return (react_1.default.createElement(hydrogen_react_1.ShopifyProvider, __assign({}, shopifyProps),
         react_1.default.createElement(hydrogen_react_2.CartProvider, null,
-            "This is the cart provider",
+            react_1.default.createElement(CartIcon_1.default, null),
             children)));
 };
 exports.CartProvider = CartProvider;
