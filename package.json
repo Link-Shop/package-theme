@@ -1,5 +1,5 @@
 {
-  "name": "@linkshop/cart-system",
+  "name": "@linkshop/theme",
   "version": "1.0.2",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -12,11 +12,8 @@
     "watch": "tsc-watch --onSuccess \"echo Build completed\""
   },
   "dependencies": {
-    "@shopify/hydrogen-react": "^2024.4.2",
-    "framer-motion": "^11.2.10",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
-    "react-animated-numbers": "^0.18.0",
     "react-dom": "^18.3.1",
     "styled-components": "^6.1.11",
     "vite": "^5.2.12"
