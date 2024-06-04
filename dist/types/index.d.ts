@@ -1,1 +1,1 @@
-export { CartProvider, useCart } from './CartProvider';
+export { default as ThemeProvider } from './ThemeProvider';
