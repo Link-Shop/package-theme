@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
 
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    color: ${({theme}) => theme?.colors?.text};
   }
 
   h1 {
