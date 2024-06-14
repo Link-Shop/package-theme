@@ -14,16 +14,16 @@ exports.GlobalStyle = (0, styled_components_1.createGlobalStyle)(templateObject_
     return ((_c = (_b = theme === null || theme === void 0 ? void 0 : theme.typography) === null || _b === void 0 ? void 0 : _b.p) === null || _c === void 0 ? void 0 : _c.fontFamily) || 'sans-serif';
 }, function (_a) {
     var _b;
-    var theme = _a.theme;
-    return ((_b = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _b === void 0 ? void 0 : _b.background) || '#ffffff';
+    var theme = _a.theme, overrides = _a.overrides;
+    return (overrides === null || overrides === void 0 ? void 0 : overrides.background) || ((_b = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _b === void 0 ? void 0 : _b.background) || '#ffffff';
 }, function (_a) {
     var _b;
-    var theme = _a.theme;
-    return ((_b = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _b === void 0 ? void 0 : _b.text) || '#000000';
+    var theme = _a.theme, overrides = _a.overrides;
+    return (overrides === null || overrides === void 0 ? void 0 : overrides.text) || ((_b = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _b === void 0 ? void 0 : _b.text) || '#000000';
 }, function (_a) {
     var _b;
-    var theme = _a.theme;
-    return (_b = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _b === void 0 ? void 0 : _b.text;
+    var theme = _a.theme, overrides = _a.overrides;
+    return (overrides === null || overrides === void 0 ? void 0 : overrides.text) || ((_b = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _b === void 0 ? void 0 : _b.text);
 }, function (_a) {
     var _b, _c;
     var theme = _a.theme;

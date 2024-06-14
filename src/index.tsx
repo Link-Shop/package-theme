@@ -4,11 +4,11 @@ import { Theme, TemplateThemes } from './types';
 import { isObject } from 'lodash';
 import { themes } from './themes';
 
-export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
+export const GlobalStyle = createGlobalStyle<{ theme: Theme; overrides: Partial<Theme['colors']> }>`
   body {
     font-family: ${({ theme }) => theme?.typography?.p?.fontFamily || 'sans-serif'};
-    background-color: ${({ theme }) => theme?.colors?.background || '#ffffff'};
-    color: ${({ theme }) => theme?.colors?.text || '#000000'};
+    background-color: ${({ theme, overrides }) => overrides?.background || theme?.colors?.background || '#ffffff'};
+    color: ${({ theme, overrides }) => overrides?.text || theme?.colors?.text || '#000000'};
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
 
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    color: ${({ theme }) => theme?.colors?.text};
+    color: ${({ theme, overrides }) => overrides?.text || theme?.colors?.text};
   }
 
   h1 {
@@ -72,6 +72,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     }
   }
 `;
+
 
 export const fetchDefaultTheme = (theme: TemplateThemes | Theme) => {
   return isObject(theme) ? theme : themes[theme];
