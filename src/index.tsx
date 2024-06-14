@@ -12,6 +12,11 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme; overrides: Partial<
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100vw;
+    overflow-x: hidden;
+    max-width: 720px;
+    margin: auto;
+    height: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
